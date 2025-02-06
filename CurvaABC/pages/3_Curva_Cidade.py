@@ -82,7 +82,8 @@ st.markdown("""
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_excel("CurvaCidade.xlsx")
+        url = "https://raw.githubusercontent.com/DerPestarzt/Curva_ABC/blob/main/CurvaABC/CurvaCidade.xlsx"
+        df = pd.read_excel(url)
         return df
     except Exception as e:
         st.error(f"Erro ao carregar o arquivo: {e}")
