@@ -82,7 +82,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     try:
-        url = "https://raw.githubusercontent.com/DerPestarzt/Curva_ABC/main/CurvaABC/CurvaCliente.xlsx"
+        url = "https://raw.githubusercontent.com/DerPestarzt/Curva_ABC/main/CurvaABC/CurvaCidade.xlsx"
         df = pd.read_excel(url)
         return df
     except Exception as e:
