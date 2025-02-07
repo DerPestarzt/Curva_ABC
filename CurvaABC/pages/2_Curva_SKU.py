@@ -147,10 +147,11 @@ if df is not None:
             'Valor Total': 'R$ {:,.2f}',
             'Percentual de Participação': '{:.1%}',
             'Percentual Acumulado': '{:.1%}'
-        }).applymap(lambda x: 'background-color: #98FB98' if x == 'A' 
-                   else ('background-color: #FFE4B5' if x == 'B' 
-                   else ('background-color: #FFB6C1' if x == 'C' else '')), 
-                   subset=['Classificação']),
+        }).apply(lambda x: pd.Series(['background-color: #98FB98; color: black' if v == 'A' 
+                   else ('background-color: #FFE4B5; color: black' if v == 'B' 
+                   else ('background-color: #FFB6C1; color: black' if v == 'C' else '')) 
+                   for v in x], index=x.index), 
+                   axis=1, subset=['Classificação']),
         use_container_width=True
     )
 
