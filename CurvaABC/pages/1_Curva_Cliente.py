@@ -70,11 +70,6 @@ st.markdown("""
         <div style="display: flex; align-items: center;">
             <h1>Análise Curva ABC</h1>
         </div>
-        <div>
-            <button style="background-color: #1E90FF; color: white; padding: 8px 15px; border: none; border-radius: 5px;">
-                Importar CSV
-            </button>
-        </div>
     </div>
 """, unsafe_allow_html=True)
 
@@ -133,13 +128,6 @@ if df is not None:
     # Tabela detalhada
     st.markdown("### Tabela Detalhada")
     
-    # Botão de download
-    st.download_button(
-        label="Download",
-        data=df.to_csv(index=False).encode('utf-8'),
-        file_name='tabela_detalhada.csv',
-        mime='text/csv',
-    )
 
     # Exibição da tabela com formatação atualizada para as novas colunas
     st.dataframe(
