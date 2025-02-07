@@ -133,12 +133,16 @@ if df is not None:
     # Tabela detalhada
     st.markdown("### Tabela Detalhada")
     
-    # Botão de download
+    # Botão de download do arquivo original
+    url = "https://raw.githubusercontent.com/DerPestarzt/Curva_ABC/main/CurvaABC/CurvaCidade.xlsx"
+    response = pd.read_excel(url)
+    excel_data = response.to_excel(index=False)
+
     st.download_button(
         label="Download",
-        data=df.to_csv(index=False).encode('utf-8'),
-        file_name='tabela_detalhada.csv',
-        mime='text/csv',
+        data=excel_data,
+        file_name='CurvaCidade.xlsx',
+        mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
     )
 
     # Exibição da tabela com formatação
