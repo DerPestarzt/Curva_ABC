@@ -84,6 +84,7 @@ def load_data():
     try:
         url = "https://raw.githubusercontent.com/DerPestarzt/Curva_ABC/main/CurvaABC/CurvaSKU.xlsx"
         df = pd.read_excel(url)
+        return df
     except Exception as e:
         st.error(f"Erro ao carregar o arquivo: {e}")
         return None
