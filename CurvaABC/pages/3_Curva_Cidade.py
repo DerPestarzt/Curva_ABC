@@ -70,11 +70,6 @@ st.markdown("""
         <div style="display: flex; align-items: center;">
             <h1>Análise Curva ABC</h1>
         </div>
-        <div>
-            <button style="background-color: #1E90FF; color: white; padding: 8px 15px; border: none; border-radius: 5px;">
-                Importar CSV
-            </button>
-        </div>
     </div>
 """, unsafe_allow_html=True)
 
@@ -133,17 +128,6 @@ if df is not None:
     # Tabela detalhada
     st.markdown("### Tabela Detalhada")
     
-    # Botão de download do arquivo original
-    url = "https://raw.githubusercontent.com/DerPestarzt/Curva_ABC/main/CurvaABC/CurvaCidade.xlsx"
-    response = pd.read_excel(url)
-    excel_data = response.to_excel(index=False)
-
-    st.download_button(
-        label="Download",
-        data=excel_data,
-        file_name='CurvaCidade.xlsx',
-        mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    )
 
     # Exibição da tabela com formatação
     st.dataframe(
