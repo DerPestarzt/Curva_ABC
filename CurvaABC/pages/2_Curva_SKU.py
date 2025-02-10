@@ -158,7 +158,7 @@ if df is not None:
             <div class="card card-a">
                 <h3>Classificação A</h3>
                 <p><strong>Corte:</strong> 80%</p>
-                <p><strong>Proporção Cidade:</strong> 15%</p>
+                <p><strong>Proporção SKU:</strong> 15%</p>
                 <p><strong>Proporção Valor:</strong> 79,96%</p>
             </div>
         """, unsafe_allow_html=True)
@@ -168,7 +168,7 @@ if df is not None:
             <div class="card card-b">
                 <h3>Classificação B</h3>
                 <p><strong>Corte:</strong> 95%</p>
-                <p><strong>Proporção Cidade:</strong> 24%</p>
+                <p><strong>Proporção SKU:</strong> 24%</p>
                 <p><strong>Proporção Valor:</strong> 15,03%</p>
             </div>
         """, unsafe_allow_html=True)
@@ -178,7 +178,7 @@ if df is not None:
             <div class="card card-c">
                 <h3>Classificação C</h3>
                 <p><strong>Corte:</strong> 100%</p>
-                <p><strong>Proporção Cidade:</strong> 61%</p>
+                <p><strong>Proporção SKU:</strong> 61%</p>
                 <p><strong>Proporção Valor:</strong> 5,01%</p>
             </div>
         """, unsafe_allow_html=True)   
